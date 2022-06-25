@@ -1,0 +1,29 @@
+.manShoesDiv {
+    min-height: calc(100vh - 183px);
+    
+}
+
+.title {
+    text-align: center;
+    padding: 50px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* @media screen and (max-width: 1000px) {
+    #item {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #item {
+        margin: auto;
+    }
+} */

@@ -1,0 +1,13 @@
+.womanShoesDiv {
+    min-height: calc(100vh - 183px);
+}
+
+.title {
+    text-align: center;
+    padding: 50px;
+    font-weight: bold;
+}
+
+#item {
+    cursor: pointer;
+}

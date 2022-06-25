@@ -1,0 +1,16 @@
+.carousel-frame {
+    background-color: rgb(95, 92, 92);
+}
+.carousel-img  {
+    margin: auto;
+    width: 100%;
+    max-width: 1300px;
+    height: 680px;
+    background-size: cover;
+    background-position: center;
+}
+
+.item3 {
+    color : black;
+    font-weight: 600;
+}
