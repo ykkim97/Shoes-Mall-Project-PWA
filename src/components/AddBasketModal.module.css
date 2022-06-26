@@ -38,7 +38,7 @@
 
 .modalBox .closeBtn {
     display: block;
-    width: 100px;
+    width: 90px;
     margin-left: 15px;
     margin-top: 40px;
     background-color: #212529;
@@ -48,7 +48,7 @@
 
 .modalBox .goBasketBtn {
     display: block;
-    width: 130px;
+    width: 140px;
     margin-top: 40px;
     background-color: #212529;
     border: 1px solid black;
@@ -57,6 +57,10 @@
 
 @media screen and (max-width: 1360px){
     .modalBox {
-        width: 55%;
+        width: 60%;
+    }
+    .modalBox .goBasketBtn,
+    .modalBox .closeBtn {
+        font-size: 14px;
     }
 }

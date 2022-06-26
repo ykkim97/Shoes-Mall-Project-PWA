@@ -25,7 +25,7 @@
 
 .headId,
 .headQuan {
-    width: 52px;
+    width: 60px;
 }
 
 .headChange {
@@ -40,9 +40,9 @@
     vertical-align: middle;
 }
 .quanChangeBtn button {
-    width: 27px;
-    margin-left: 3px;
-    margin-right: 3px;
+    width: 24px;
+    margin-left: 2px;
+    margin-right: 2px;
     border-radius: 5px;
     cursor: pointer;
 }
