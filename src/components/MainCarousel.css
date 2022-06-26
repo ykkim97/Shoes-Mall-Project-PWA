@@ -14,3 +14,15 @@
     color : black;
     font-weight: 600;
 }
+
+
+@media screen and (max-width : 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-img {
+        width: 100px;
+        height: 400px;
+    }
+}

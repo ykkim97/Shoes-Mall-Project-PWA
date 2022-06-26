@@ -5,7 +5,6 @@ import MainCarousel from "../components/MainCarousel";
 import MainNavbar from "../components/MainNavbar";
 import MainPopularItem from "../components/MainPopularItem";
 import Footer from "../components/Footer";
-import { Button } from "react-bootstrap";
 import styles from "./Home.module.css";
 
 function Home({popularShoes, isLogged, setIsLogged}) {
