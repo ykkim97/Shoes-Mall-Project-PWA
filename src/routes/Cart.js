@@ -58,12 +58,12 @@ function Cart({isLogged, setIsLogged}) {
                 <Table className={styles.basketTable} striped bordered hover>
                     <thead className={styles.basketTableHead}>
                         <tr>
-                            <th>상품 ID</th>
+                            <th className={styles.headId}>ID</th>
                             <th>상품명</th>
-                            <th>수량</th>
+                            <th className={styles.headQuan}>수량</th>
                             <th>단가</th>
                             <th>총 합</th>
-                            <th>변경</th>
+                            <th className={styles.headChange}>변경</th>
                         </tr>
                     </thead>
                     <tbody className={styles.basketTableBody}>
