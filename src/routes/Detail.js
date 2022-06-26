@@ -153,27 +153,30 @@ function Detail({popularShoes,setPopularShoes,isLogged,setIsLogged}) {
 
                         <div className={styles.menu}>
 
-                            {/* 수량 */}
-                            <div className={styles.countDiv}>
-                                <input type="text" value={itemCount} onChange={onChange} id={styles.itemCount}></input>
-                                <button onClick={addItemCount} id={styles.plusBtn}>+</button>
-                                <button onClick={minusItemCount} id={styles.minusBtn}>-</button>
-                            </div>
+                            <div className={styles.menu1}>
+                                    {/* 수량 */}
+                                <div className={styles.countDiv}>
+                                    <input type="text" value={itemCount} onChange={onChange} id={styles.itemCount}></input>
+                                    <button onClick={addItemCount} id={styles.plusBtn}>+</button>
+                                    <button onClick={minusItemCount} id={styles.minusBtn}>-</button>
+                                </div>
 
-                            <button className="btn btn-primary" id={styles.putIn}
-                                onClick={addBasket}
-                            >장바구니담기</button>
+                                <button className="btn btn-primary" id={styles.putIn}
+                                    onClick={addBasket}
+                                >장바구니담기</button>
+                            </div>
+                            
 
                             {/* 장바구니담기 클릭 시 Modal창 띄우기 */}
                             {
                                 addBasketModalOn ? <AddBasketModal onOpenModal={onOpenModal}/> : null
                             }
-
-                            <button className="btn btn-primary" id={styles.goBasket}
-                                onClick={() => navigate('/cart')}
-                            >장바구니로</button>
-                            <button className="btn btn-success" id={styles.goPurchase}>바로구매</button> 
-                            <button className="btn btn-danger" id={styles.goBack} onClick={() => navigate(-1)}>뒤로가기</button> 
+                            <div>
+                                <button className="btn btn-primary" id={styles.goBasket}
+                                    onClick={() => navigate('/cart')}
+                                >장바구니로</button>
+                                <button className="btn btn-success" id={styles.goPurchase}>바로구매</button>
+                            </div>
                         </div>
                     </div>
                 </div>
