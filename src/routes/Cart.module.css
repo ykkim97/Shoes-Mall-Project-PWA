@@ -41,20 +41,26 @@
 }
 .quanChangeBtn button {
     width: 24px;
-    margin-left: 2px;
-    margin-right: 2px;
+    height: 24px;
+    margin-left: 1px;
+    margin-right: 1px;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
+    font-size: 11px;
 }
 
 .quanChangeBtn button:nth-child(1) {
-    background: rgb(151, 206, 151);
+    background: rgb(77, 156, 32);
+    color: white;
 }
 .quanChangeBtn button:nth-child(2) {
-    background: rgb(214, 185, 89);
+    background: rgb(230, 158, 50);
+    color: white;
 }
 .quanChangeBtn button:nth-child(3) {
     background: rgb(221, 98, 61);
+    color: white;
 }
 
 
@@ -120,3 +126,25 @@
 }
 
 
+@media screen and (max-width: 418px) {
+    .basketTable {
+        font-size: 10.5px;
+    }
+
+    .totalAmount {
+        font-size: 23px;
+    }
+
+    .quanChangeBtn button {
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+
+    .quanChangeBtn button .faBtn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}

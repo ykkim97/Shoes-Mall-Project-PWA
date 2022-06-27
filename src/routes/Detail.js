@@ -11,6 +11,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getDatabase, onValue, ref, update } from "firebase/database";
 import { getAuth } from "firebase/auth";
 import AddBasketModal from "../components/AddBasketModal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Detail({popularShoes,setPopularShoes,isLogged,setIsLogged}) {
     const [tabs, setTabs] = useState(0);
@@ -174,7 +176,7 @@ function Detail({popularShoes,setPopularShoes,isLogged,setIsLogged}) {
                             <div>
                                 <button className="btn btn-primary" id={styles.goBasket}
                                     onClick={() => navigate('/cart')}
-                                >장바구니로</button>
+                                ><FontAwesomeIcon icon={faCartShopping} /></button>
                                 <button className="btn btn-success" id={styles.goPurchase}>바로구매</button>
                             </div>
                         </div>

@@ -9,6 +9,10 @@ import { useNavigate } from "react-router-dom";
 import { getDatabase, onValue, ref, update } from "firebase/database";
 import { getAuth } from "firebase/auth";
 import Payment from "../components/Payment";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faMinus } from "@fortawesome/free-solid-svg-icons";
 
 function Cart({isLogged, setIsLogged}) {
     let total = 0;
@@ -61,8 +65,8 @@ function Cart({isLogged, setIsLogged}) {
                             <th className={styles.headId}>ID</th>
                             <th>상품명</th>
                             <th className={styles.headQuan}>수량</th>
-                            <th>단가</th>
-                            <th>총 합</th>
+                            <th>가격</th>
+                            <th>합계</th>
                             <th className={styles.headChange}>변경</th>
                         </tr>
                     </thead>
@@ -93,7 +97,7 @@ function Cart({isLogged, setIsLogged}) {
                                                 }
                                                 
                                             }
-                                        }>+</button>
+                                        }><FontAwesomeIcon icon={faPlus} className={styles.faBtn} /></button>
                                         <button 
                                             onClick={() => {
                                                 if (isLogged) {
@@ -108,7 +112,7 @@ function Cart({isLogged, setIsLogged}) {
                                                     if (item.quan > 1) dispatch({type : "수량감소", id : item.id});
                                                 }
                                             }
-                                        }>-</button>
+                                        }><FontAwesomeIcon icon={faMinus} className={styles.faBtn} /></button>
                                         <button 
                                             onClick={() => {
                                                 if (isLogged) {
@@ -127,7 +131,7 @@ function Cart({isLogged, setIsLogged}) {
                                                 }
                                                 alert('상품이 삭제되었습니다.')
                                             }
-                                        }>X</button>
+                                        }><FontAwesomeIcon icon={faTrashCan} className={styles.faBtn} id={styles['faBtn-delete']}/></button>
                                     </td>
                                 </tr>
                             )

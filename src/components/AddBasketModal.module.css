@@ -59,8 +59,13 @@
     .modalBox {
         width: 60%;
     }
+
+    .modalBox h3 {
+        font-size: 20px;
+    }
+
     .modalBox .goBasketBtn,
     .modalBox .closeBtn {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
