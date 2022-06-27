@@ -8,10 +8,10 @@ const ShoesTitle = styled.h4`
     width : 500px;
     margin-top : 10px;
     font-size : 30px;
-    color : Black;
-
-    @media only screen and (max-width: 1200px) {
-        font-size : 15px;
+    color : black;
+    
+    @media screen and (max-width : 768px) {
+        font-size : 12px;
     }
 `
 const ShoesContent = styled.p`

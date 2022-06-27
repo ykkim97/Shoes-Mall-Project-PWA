@@ -16,14 +16,12 @@
 }
 
 .img {
-    /* width: 400px;
-    height: 300px; */
     width: 40%;
     height: 200px;
 }
 
 .content { 
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 
@@ -36,6 +34,10 @@
 @media screen and (max-width : 768px){
     .img { 
         width: 50%;
+    }
+
+    .content { 
+        padding-left: 15px;
     }
 }
 
