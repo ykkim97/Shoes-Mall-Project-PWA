@@ -7,7 +7,6 @@ function DetailTab() {
         <div className={styles["detailtab-div"]}>
             <h5 className={styles["detailtab-title"]}>필수 표기 정보</h5>
             <table className={styles["table-frame"]}>
-
                 <tbody>
                     <tr>
                         <td className={styles.itemKey}>제품의 주 소재</td>
