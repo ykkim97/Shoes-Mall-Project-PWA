@@ -39,7 +39,6 @@ function Auth({user, setUser, isLogged, setIsLogged}) {
             // sessionStorage.setItem("loginInfo",JSON.stringify({userId : loginEmail, userPassword : loginPassword}));
             
         } catch (error) {
-            console.log(error.message);
             alert("이메일 혹은 비밀번호가 틀립니다.");
         }
     }

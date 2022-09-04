@@ -39,7 +39,6 @@ function Detail({popularShoes,setPopularShoes,isLogged,setIsLogged}) {
             const auth = getAuth();
             const userId = auth.currentUser.uid;
             
-
             // 경로 => users/${userId}/cart
             const cartRef = ref(database, `users/${userId}/cart`);
 
@@ -76,7 +75,6 @@ function Detail({popularShoes,setPopularShoes,isLogged,setIsLogged}) {
 
     const onChange = (e) => {
         setItemCount(e.target.value);
-        console.log(itemCount)
     }
 
     const addItemCount = () => {
