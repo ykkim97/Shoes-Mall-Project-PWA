@@ -17,7 +17,6 @@ const SignUp = lazy(() => import("./routes/SignUp.js"))
 const ManShoes = lazy(() => import("./routes/ManShoes.js"));
 const WomanShoes = lazy(() => import("./routes/WomanShoes.js"));
 const KidsShoes = lazy(() => import("./routes/KidsShoes.js"));
-// import Watched from './routes/Watched';
 const Watched = lazy(() => import("./routes/Watched.js"));
 
 function App() {
@@ -43,18 +42,10 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // const loginInfo = JSON.parse(sessionStorage.getItem("loginInfo"));
-        // const [userId, userPassword] = Object.values(loginInfo);
-        // const user = signInWithEmailAndPassword(
-        //   auth,
-        //   userId,
-        //   userPassword
-        // );
         setIsLogged(true)
       }
     })
   }, [])
-
 
   return (
     <div className="App">
@@ -62,6 +53,7 @@ function App() {
         <ScrollToTop />
         <Suspense fallback={<Loading />}> 
           <Routes>
+
             {/* 메인 페이지 */}
             <Route exact path='/' element={
               <Home 

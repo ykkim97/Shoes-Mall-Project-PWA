@@ -4,7 +4,6 @@ import styled from "styled-components"
 import styles from "./MyPage.module.css";
 import { useNavigate } from "react-router-dom";
 
-// styled-components
 const Bar = styled.div`
     background : rgb(233, 227, 227);
     width : 100%;
@@ -26,7 +25,6 @@ const Item = styled.li`
     font-size : 20px;
     cursor: pointer;
 `
-
 
 function MyPage({isLogged, setIsLogged}) {
     const navigate = useNavigate();

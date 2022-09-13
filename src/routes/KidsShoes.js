@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Footer from "../components/Footer";
 import MainNavbar from "../components/MainNavbar";
 import MainPopularItem from "../components/MainPopularItem";
 import styles from "./KidsShoes.module.css";
 
-function KidsShoes({popularShoes, isLogged, setIsLogged, ax}) {
+function KidsShoes({
+    popularShoes, 
+    isLogged, 
+    setIsLogged, 
+    ax
+}) {
     const count = [0]; // 상품 개수
 
     return(

@@ -20,7 +20,7 @@ function ShipInfo() {
                     <td rowSpan="2" className={styles["itemKey"]}>배송비</td>
                     <td rowSpan="2">
                         무료배송<br />
-                        - 로켓배송 상품 중 19,800원 이상 구매 시 무료배송<br />
+                        - Fast배송 상품 중 25000원 이상 구매 시 무료배송<br />
                         - 도서산간 지역 추가비용 없음
                     </td>
                 </tr>

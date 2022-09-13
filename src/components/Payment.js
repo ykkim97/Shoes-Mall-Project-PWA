@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import styles from "./Payment.module.css";
 
-function Payment({onOpenModal, modalTotal}) {
+function Payment({ onOpenModal, modalTotal }) {
     return (
         <div className={styles["payment-modal"]}>
             <div className={styles["bg"]}></div>

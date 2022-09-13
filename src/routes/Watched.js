@@ -5,7 +5,11 @@ import ItemHistory from "../components/ItemHistory";
 import { get, getDatabase, onValue, ref, update } from "firebase/database";
 import { getAuth } from "firebase/auth";
 
-function Watched({popularShoes, isLogged, setIsLogged}) {
+function Watched({
+    popularShoes, 
+    isLogged, 
+    setIsLogged
+}) {
     // localstorage에서 가져온 id값을 저장할 state
     const [watchedItemID , setWatchedItemID] = useState([]);
     

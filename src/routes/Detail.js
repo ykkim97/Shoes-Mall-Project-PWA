@@ -14,7 +14,11 @@ import AddBasketModal from "../components/AddBasketModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-function Detail({popularShoes,setPopularShoes,isLogged,setIsLogged}) {
+function Detail({
+    popularShoes,
+    isLogged,
+    setIsLogged
+}) {
     const [tabs, setTabs] = useState(0);
     const [isAlert, setIsAlert] = useState(true);
     const [itemCount, setItemCount] = useState(1);
@@ -154,7 +158,7 @@ function Detail({popularShoes,setPopularShoes,isLogged,setIsLogged}) {
                         <div className={styles.menu}>
 
                             <div className={styles.menu1}>
-                                    {/* 수량 */}
+                                {/* 수량 */}
                                 <div className={styles.countDiv}>
                                     <input type="text" value={itemCount} onChange={onChange} id={styles.itemCount}></input>
                                     <button onClick={addItemCount} id={styles.plusBtn}>+</button>

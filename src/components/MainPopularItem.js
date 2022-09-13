@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import styles from "./MainPopularItem.module.css";
 
-// styled-components
 const ShoesTitle = styled.h4`
     margin-top : 10px;
     font-size : 19px;

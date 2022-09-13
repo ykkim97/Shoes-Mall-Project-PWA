@@ -2,10 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { 
-    // createUserWithEmailAndPassword,
     onAuthStateChanged,
     signInWithEmailAndPassword,
-    // signOut,
 } from "firebase/auth";
 import { auth } from "../firebase";
 import styles from "./Auth.module.css";
@@ -35,9 +33,6 @@ function Auth({user, setUser, isLogged, setIsLogged}) {
             );
             // 로그인 성공시 true로
             setIsLogged(true);
-            
-            // sessionStorage.setItem("loginInfo",JSON.stringify({userId : loginEmail, userPassword : loginPassword}));
-            
         } catch (error) {
             alert("이메일 혹은 비밀번호가 틀립니다.");
         }
@@ -52,7 +47,7 @@ function Auth({user, setUser, isLogged, setIsLogged}) {
                 })
             }
 
-            {/* 로그인 / 로그아웃 */}
+            {/* 로그인 */}
             <div className={styles.loginDiv}>
                 {/* 로그인 */}
                 <div className={styles.loginForm}>
@@ -77,12 +72,6 @@ function Auth({user, setUser, isLogged, setIsLogged}) {
                 </div>
                 <h5 className={styles.title}>카페슈 CafeShoe</h5>
             </div>
-
-            {/* 현재 로그인된 사용자 이메일 출력 */}
-            {/* <div>User Logged In : {user?.email}</div> */}
-
-            {/* 로그아웃 */}
-            {/* <button onClick={signout}>로그아웃</button> */}
         </>
     )
 }

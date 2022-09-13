@@ -36,7 +36,7 @@ function MainCarousel() {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3 className='item3' >Converse RedWhite</h3>
+                        <h3 className='item3'>Converse RedWhite</h3>
                         <p className='item3'>10% 할인</p>
                     </Carousel.Caption>
                 </Carousel.Item>
