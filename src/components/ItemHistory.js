@@ -30,7 +30,7 @@ function ItemHistory({shoes, idx}) {
             {
                 idx < 21 
                 ? (
-                    <div className="col-md-12 populars" onClick={() => {navigate(`/detail/${shoes.id}`)}} id={styles.ItemDiv}>
+                    <div className="col-md-12 populars" onClick={() => {navigate(`/detail/${shoes?.id}`)}} id={styles.ItemDiv}>
                         <img 
                             src={`https://firebasestorage.googleapis.com/v0/b/shoes-shoppingmall.appspot.com/o/items%2Fshoes${idx}.jpg?alt=media`} 
                             width="80%" 
@@ -38,9 +38,9 @@ function ItemHistory({shoes, idx}) {
                             className={styles.img}
                         />
                         <div className={styles.content}>
-                            <ShoesTitle>{shoes.title}</ShoesTitle>
-                            <ShoesContent>{shoes.content}</ShoesContent>
-                            <ShoesPrice>{shoes.price}원</ShoesPrice>
+                            <ShoesTitle>{shoes?.title}</ShoesTitle>
+                            <ShoesContent>{shoes?.content}</ShoesContent>
+                            <ShoesPrice>{shoes?.price}원</ShoesPrice>
                         </div>
                     </div>
                 ) : null

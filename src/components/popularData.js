@@ -24,5 +24,4 @@ export default [
         price : 130000,
         classify : "woman"
     },
-    
 ] 

@@ -13,7 +13,6 @@ import { getAuth } from "firebase/auth";
 import AddBasketModal from "../components/AddBasketModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import DetailPayment from "../components/DetailPayment";
 
 function Detail({
     popularShoes,
@@ -23,12 +22,9 @@ function Detail({
     const [tabs, setTabs] = useState(0);
     const [isAlert, setIsAlert] = useState(true);
     const [itemCount, setItemCount] = useState(1);
-    let totalPrice = 0;
 
     // 장바구니 클릭 Modal Switch
     const [addBasketModalOn, setAddBasketModalOn] = useState(false);
-    // BUY IT NOW 버튼 클릭 Modal Switch
-    const [buyItNowModalOn, setBuyItNowModalOn] = useState(false);
 
     let { id } = useParams();
     let findItem = popularShoes.find(item => item.id == id);
@@ -38,11 +34,7 @@ function Detail({
     const navigate = useNavigate();
     
     const onOpenModal = () => {
-        setAddBasketModalOn(!addBasketModalOn);
-    }
-
-    const openBuyItNowModal = () => {
-        setBuyItNowModalOn(!buyItNowModalOn);
+        setAddBasketModalOn(!addBasketModalOn)
     }
     
     const addBasket = () => {
@@ -156,12 +148,12 @@ function Detail({
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 detailInfo">
-                        <img src={`https://firebasestorage.googleapis.com/v0/b/shoes-shoppingmall.appspot.com/o/items%2Fshoes${findItem.id}.jpg?alt=media`} width="100%" />
+                        <img src={`https://firebasestorage.googleapis.com/v0/b/shoes-shoppingmall.appspot.com/o/items%2Fshoes${findItem?.id}.jpg?alt=media`} width="100%" />
                     </div>
                     <div className="col-md-12" id={styles.detailInfo}>
-                        <h4 className="pt-5">{findItem.title}</h4>
-                        <p>{findItem.content}</p>
-                        <p id={styles.detailPrice}>판매가 : {findItem.price}원</p>
+                        <h4 className="pt-5">{findItem?.title}</h4>
+                        <p>{findItem?.content}</p>
+                        <p id={styles.detailPrice}>판매가 : {findItem?.price}원</p>
 
                         <div className={styles.menu}>
 
@@ -183,20 +175,7 @@ function Detail({
                                 <button className="btn btn-primary" id={styles.goBasket}
                                     onClick={addBasket}
                                 ><FontAwesomeIcon icon={faCartShopping} /></button>
-                                <button 
-                                    className="btn btn-success" 
-                                    id={styles.goPurchase}
-                                    onClick={openBuyItNowModal}
-                                >BUY IT NOW</button>
-                                {
-                                    buyItNowModalOn ? 
-                                    <DetailPayment 
-                                        openBuyItNowModal={openBuyItNowModal}
-                                        findItem={findItem}
-                                        itemCount={itemCount}
-                                    />
-                                    : null
-                                }
+                                <button className="btn btn-success" id={styles.goPurchase}>BUY IT NOW</button>
                             </div>
                         </div>
                     </div>
