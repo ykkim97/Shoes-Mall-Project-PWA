@@ -8,16 +8,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getDatabase, onValue, ref, update } from "firebase/database";
 import { getAuth } from "firebase/auth";
-import Payment from "../components/Payment";
+import CartPayment from "../components/CartPayment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 
-function Cart({isLogged, setIsLogged}) {
+function Cart({ isLogged, setIsLogged }) {
     let total = 0;
     const [cartArray, setCartArray] = useState([]);
     const [modalOn, setModalOn] = useState(false);
+
     // 결제모달창의 입금액을 표시하기 위해 총 결제금액을 저장할 변수 modalTotal
     let modalTotal = [];
 
@@ -26,6 +27,11 @@ function Cart({isLogged, setIsLogged}) {
     
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    // Modal
+    const onOpenModal = () => {
+        setModalOn(!modalOn);
+    }
 
     // cartArray에 DB에서 가져온 장바구니 데이터 저장하기
     useEffect(() => {
@@ -42,11 +48,6 @@ function Cart({isLogged, setIsLogged}) {
             })
         }
     }, []);
-
-    // Modal
-    const onOpenModal = () => {
-        setModalOn(!modalOn);
-    }
 
     return (
         <>
@@ -166,7 +167,7 @@ function Cart({isLogged, setIsLogged}) {
                 <div className={styles.payment}>
                     <Button className={styles.goPaymentBtn} onClick={onOpenModal}>결제하기</Button>
                     {modalOn ? 
-                        <Payment 
+                        <CartPayment 
                             onOpenModal={onOpenModal}
                             modalTotal={modalTotal}
                         /> : ''

@@ -13,6 +13,7 @@ import { getAuth } from "firebase/auth";
 import AddBasketModal from "../components/AddBasketModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import DetailPayment from "../components/DetailPayment";
 
 function Detail({
     popularShoes,
@@ -22,9 +23,12 @@ function Detail({
     const [tabs, setTabs] = useState(0);
     const [isAlert, setIsAlert] = useState(true);
     const [itemCount, setItemCount] = useState(1);
+    let totalPrice = 0;
 
     // 장바구니 클릭 Modal Switch
     const [addBasketModalOn, setAddBasketModalOn] = useState(false);
+    // BUY IT NOW 버튼 클릭 Modal Switch
+    const [buyItNowModalOn, setBuyItNowModalOn] = useState(false);
 
     let { id } = useParams();
     let findItem = popularShoes.find(item => item.id == id);
@@ -34,7 +38,11 @@ function Detail({
     const navigate = useNavigate();
     
     const onOpenModal = () => {
-        setAddBasketModalOn(!addBasketModalOn)
+        setAddBasketModalOn(!addBasketModalOn);
+    }
+
+    const openBuyItNowModal = () => {
+        setBuyItNowModalOn(!buyItNowModalOn);
     }
     
     const addBasket = () => {
@@ -175,7 +183,20 @@ function Detail({
                                 <button className="btn btn-primary" id={styles.goBasket}
                                     onClick={addBasket}
                                 ><FontAwesomeIcon icon={faCartShopping} /></button>
-                                <button className="btn btn-success" id={styles.goPurchase}>BUY IT NOW</button>
+                                <button 
+                                    className="btn btn-success" 
+                                    id={styles.goPurchase}
+                                    onClick={openBuyItNowModal}
+                                >BUY IT NOW</button>
+                                {
+                                    buyItNowModalOn ? 
+                                    <DetailPayment 
+                                        openBuyItNowModal={openBuyItNowModal}
+                                        findItem={findItem}
+                                        itemCount={itemCount}
+                                    />
+                                    : null
+                                }
                             </div>
                         </div>
                     </div>

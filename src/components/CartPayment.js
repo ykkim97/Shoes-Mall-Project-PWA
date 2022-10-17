@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import styles from "./Payment.module.css";
+import styles from "./CartPayment.module.css";
 
 function Payment({ onOpenModal, modalTotal }) {
     return (

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import axios from "axios";
 import popularData from './components/popularData';
 import ScrollToTop from "./components/ScrollToTop";
 import Loading from './components/Loading';
