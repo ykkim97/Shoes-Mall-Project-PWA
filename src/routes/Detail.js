@@ -2,7 +2,7 @@
 
 import React,{useEffect, useState} from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import MainNavbar from "../components/MainNavbar";
+import HomeNavbar from "../components/Home/HomeNavbar";
 import styles from "./Detail.module.css"
 import { Nav } from "react-bootstrap";
 import Footer from "../components/Footer";
@@ -47,7 +47,7 @@ function Detail({
             const cartRef = ref(database, `users/${userId}/cart`);
 
             // 장바구니에 넣을 Object형식 - cartFormat
-            let cartFormat = {id : findItem.id, name : findItem.title, quan : itemCount, price : findItem.price};
+            let cartFormat = {id : findItem?.id, name : findItem?.title, quan : itemCount, price : findItem?.price};
             // DB에서 가져온것을 저장할 변수 - cartArray
             let cartArray;
             onValue(cartRef, (snapshot) => {
@@ -72,7 +72,7 @@ function Detail({
             })
             
         } else {
-            dispatch({type : "항목추가", payload : {id : findItem.id, name : findItem.title, quan : itemCount, price : findItem.price}});
+            dispatch({type : "항목추가", payload : {id : findItem?.id, name : findItem?.title, quan : itemCount, price : findItem?.price}});
         }
         onOpenModal();
     }
@@ -141,7 +141,7 @@ function Detail({
 
     return (
         <>
-            <MainNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
+            <HomeNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
 
             <h1 className={styles.detailInfoTitle}>상품 정보</h1>
 

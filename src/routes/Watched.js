@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MainNavbar from "../components/MainNavbar";
+import HomeNavbar from "../components/Home/HomeNavbar";
 import styles from "./Watched.module.css";
 import ItemHistory from "../components/ItemHistory";
 import { get, getDatabase, onValue, ref, update } from "firebase/database";
@@ -36,7 +36,7 @@ function Watched({
 
     return (
         <div>
-            <MainNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
+            <HomeNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
             <h3 className={styles.watchedTitle}>최근 본 상품</h3>
             <hr />
             <div className={styles.watchedItemDiv}>

@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
-import MainNavbar from "../components/MainNavbar";
-import MainPopularItem from "../components/MainPopularItem";
+import HomeNavbar from "../components/Home/HomeNavbar";
+import HomePopularItem from "../components/Home/HomePopularItem";
 import styles from "./WomanShoes.module.css";
 
 function WomanShoes({
@@ -15,7 +15,7 @@ function WomanShoes({
     return(
         <>
             <div className={styles.womanShoesDiv}>
-                <MainNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
+                <HomeNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
                 <h3 className={styles.title}>여성신발 ({count}개의 상품)</h3>
                 <div className="container">
                     <div className="row" id={styles["item"]}>
@@ -23,7 +23,7 @@ function WomanShoes({
                             if(shoes.classify == "woman") {
                                 count[0] += 1;
                                 return (
-                                    <MainPopularItem shoes={shoes} key={idx} idx={idx} />
+                                    <HomePopularItem shoes={shoes} key={idx} idx={idx} />
                                 )
                             } 
                         })}

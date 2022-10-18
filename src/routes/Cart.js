@@ -1,7 +1,7 @@
 // 장바구니 Page
 
 import React, { useEffect, useState } from "react";
-import MainNavbar from "../components/MainNavbar";
+import HomeNavbar from "../components/Home/HomeNavbar";
 import {Table,Button} from "react-bootstrap";
 import styles from "./Cart.module.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -54,7 +54,7 @@ function Cart({ isLogged, setIsLogged }) {
             <div className={styles.shoppingBasketDiv}>
 
                 {/* Navbar */}
-                <MainNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
+                <HomeNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
 
                 {/* "장바구니" 제목 */}
                 <h1 className={styles.shoppingBasket}>장바구니</h1>

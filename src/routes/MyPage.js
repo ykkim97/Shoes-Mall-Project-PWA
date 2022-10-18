@@ -1,5 +1,5 @@
 import React from "react";
-import MainNavbar from "../components/MainNavbar";
+import HomeNavbar from "../components/Home/HomeNavbar";
 import styled from "styled-components"
 import styles from "./MyPage.module.css";
 import { useNavigate } from "react-router-dom";
@@ -30,7 +30,7 @@ function MyPage({isLogged, setIsLogged}) {
     const navigate = useNavigate();
     return (
         <>
-            <MainNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
+            <HomeNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
             <h3 className={styles.mypageTitle}>마이 페이지</h3>
             <Bar maxWidth={"150px"}>
                 <h5 className={styles.orderCheckTitle}>주문/배송조회</h5>

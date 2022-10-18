@@ -1,9 +1,9 @@
 // 메인 홈 화면
 
 import React, { useState } from "react";
-import MainCarousel from "../components/MainCarousel";
-import MainNavbar from "../components/MainNavbar";
-import MainPopularItem from "../components/MainPopularItem";
+import HomeCarousel from "../components/Home/HomeCarousel";
+import HomeNavbar from "../components/Home/HomeNavbar";
+import HomePopularItem from "../components/Home/HomePopularItem";
 import Footer from "../components/Footer";
 import styles from "./Home.module.css";
 
@@ -13,9 +13,9 @@ function Home({popularShoes, isLogged, setIsLogged}) {
     return (
         <div>
 
-            <MainNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
+            <HomeNavbar isLogged={isLogged} setIsLogged={setIsLogged}/>
 
-            <MainCarousel />
+            <HomeCarousel />
 
             <div className={styles["popular-item"]}>
                 <h3 className={styles["popular-title"]}>인기 상품</h3>
@@ -24,7 +24,7 @@ function Home({popularShoes, isLogged, setIsLogged}) {
                         {popularShoes.map((shoes, idx) => {
                             if(!visible && idx > 2) return null;
                             return (
-                                <MainPopularItem shoes={shoes} key={idx} idx={idx} />
+                                <HomePopularItem shoes={shoes} key={idx} idx={idx} />
                             )
                         })} 
                     </div>
