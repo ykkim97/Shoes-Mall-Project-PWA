@@ -1,15 +1,15 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import "./MainCarousel.css";
+import styles from "./MainCarousel.module.css";
 
-// 메인홈 슬라이드
+// Home 슬라이드
 function MainCarousel() {
     return (
         <div>
-            <Carousel fade className='carousel-frame'>
-                <Carousel.Item className='carousel-item'>
+            <Carousel fade className={styles['carousel-frame']}>
+                <Carousel.Item className={styles['carousel-item']}>
                     <img
-                        className="d-block w-100 carousel-img"
+                        className={`d-block w-100 ${styles['carousel-img']}`}
                         src="img/home-캐러셀1.JPG"
                         alt="First slide"
                     />
@@ -18,9 +18,9 @@ function MainCarousel() {
                         <p>15% 할인</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className='carousel-item'>
+                <Carousel.Item className={styles['carousel-item']}>
                     <img
-                        className="d-block w-100 carousel-img"
+                        className={`d-block w-100 ${styles['carousel-img']}`}
                         src="img/home-캐러셀2.jpg"
                         alt="Second slide"
                     />
@@ -29,15 +29,15 @@ function MainCarousel() {
                         <p>30% 할인</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className='carousel-item'>
+                <Carousel.Item className={styles['carousel-item']}>
                     <img
-                        className="d-block w-100 carousel-img"
+                        className={`d-block w-100 ${styles['carousel-img']}`}
                         src="img/home-캐러셀3.jpg"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3 className='item3'>Converse RedWhite</h3>
-                        <p className='item3'>10% 할인</p>
+                        <h3 className={styles['item3']}>Converse RedWhite</h3>
+                        <p className={styles['item3']}>10% 할인</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
