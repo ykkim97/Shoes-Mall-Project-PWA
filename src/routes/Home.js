@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import HomeCarousel from "../components/Home/HomeCarousel";
-import HomeNavbar from "../components/Home/HomeNavbar";
+import HomeNavbar from "../components/Common/HomeNavbar";
 import HomePopularItem from "../components/Home/HomePopularItem";
-import Footer from "../components/Footer";
+import Footer from "../components/Common/Footer";
 import styles from "./Home.module.css";
 
 function Home({popularShoes, isLogged, setIsLogged}) {

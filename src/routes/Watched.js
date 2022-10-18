@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import HomeNavbar from "../components/Home/HomeNavbar";
+import HomeNavbar from "../components/Common/HomeNavbar";
 import styles from "./Watched.module.css";
-import ItemHistory from "../components/ItemHistory";
+import ItemHistory from "../components/Watched/ItemHistory";
 import { get, getDatabase, onValue, ref, update } from "firebase/database";
 import { getAuth } from "firebase/auth";
 

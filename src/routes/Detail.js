@@ -2,17 +2,18 @@
 
 import React,{useEffect, useState} from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import HomeNavbar from "../components/Home/HomeNavbar";
+import HomeNavbar from "../components/Common/HomeNavbar";
 import styles from "./Detail.module.css"
 import { Nav } from "react-bootstrap";
-import Footer from "../components/Footer";
-import TabContent from "../components/TabContent";
+import Footer from "../components/Common/Footer";
+import TabContent from "../components/Detail/TabContent";
 import { useDispatch, useSelector } from "react-redux";
 import { getDatabase, onValue, ref, update } from "firebase/database";
 import { getAuth } from "firebase/auth";
-import AddBasketModal from "../components/AddBasketModal";
+import AddBasketModal from "../components/Detail/AddBasketModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import DetailPayment from "../components/Detail/DetailPayment";
 
 function Detail({
     popularShoes,
@@ -22,9 +23,12 @@ function Detail({
     const [tabs, setTabs] = useState(0);
     const [isAlert, setIsAlert] = useState(true);
     const [itemCount, setItemCount] = useState(1);
+    let totalPaymentPrice = 0;
 
     // 장바구니 클릭 Modal Switch
     const [addBasketModalOn, setAddBasketModalOn] = useState(false);
+    // BUY IT NOW 버튼 클릭 Modal Switch
+    const [buyItNowModalOn, setBuyItNowModalOn] = useState(false);
 
     let { id } = useParams();
     let findItem = popularShoes.find(item => item.id == id);
@@ -35,6 +39,10 @@ function Detail({
     
     const onOpenModal = () => {
         setAddBasketModalOn(!addBasketModalOn)
+    }
+
+    const openBuyItNowModal = () => {
+        setBuyItNowModalOn(!buyItNowModalOn);
     }
     
     const addBasket = () => {
@@ -171,12 +179,25 @@ function Detail({
                             {
                                 addBasketModalOn ? <AddBasketModal onOpenModal={onOpenModal}/> : null
                             }
+
+                            {/* BUY IT NOW 클릭 시 결제창 띄우기 */}
+                            {
+                                    buyItNowModalOn ? 
+                                    <DetailPayment 
+                                        openBuyItNowModal={openBuyItNowModal}
+                                        findItem={findItem}
+                                        itemCount={itemCount}
+                                    />
+                                    : null
+                            }
+
                             <div>
                                 <button className="btn btn-primary" id={styles.goBasket}
                                     onClick={addBasket}
                                 ><FontAwesomeIcon icon={faCartShopping} /></button>
-                                <button className="btn btn-success" id={styles.goPurchase}>BUY IT NOW</button>
+                                <button className="btn btn-success" id={styles.goPurchase} onClick={openBuyItNowModal} >BUY IT NOW</button>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -202,6 +223,7 @@ function Detail({
                 
                 <TabContent tabs={tabs} />
             </div> 
+            
             <Footer addBasketModalOn={addBasketModalOn}/>
             
         </>

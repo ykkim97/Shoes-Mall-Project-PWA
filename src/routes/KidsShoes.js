@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../components/Footer";
-import HomeNavbar from "../components/Home/HomeNavbar";
+import Footer from "../components/Common/Footer";
+import HomeNavbar from "../components/Common/HomeNavbar";
 import HomePopularItem from "../components/Home/HomePopularItem";
 import styles from "./KidsShoes.module.css";
 

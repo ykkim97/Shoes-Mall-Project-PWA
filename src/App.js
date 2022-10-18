@@ -1,8 +1,8 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import popularData from './components/popularData';
-import ScrollToTop from "./components/ScrollToTop";
-import Loading from './components/Loading';
+import popularData from './data/popularData';
+import ScrollToTop from "./components/Common/ScrollToTop";
+import Loading from './components/Common/Loading';
 import './App.css';
 import Home from './routes/Home';
 import { getDatabase, onValue, ref } from "firebase/database";

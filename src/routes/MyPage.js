@@ -1,5 +1,5 @@
 import React from "react";
-import HomeNavbar from "../components/Home/HomeNavbar";
+import HomeNavbar from "../components/Common/HomeNavbar";
 import styled from "styled-components"
 import styles from "./MyPage.module.css";
 import { useNavigate } from "react-router-dom";

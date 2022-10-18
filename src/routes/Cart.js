@@ -1,14 +1,14 @@
 // 장바구니 Page
 
 import React, { useEffect, useState } from "react";
-import HomeNavbar from "../components/Home/HomeNavbar";
-import {Table,Button} from "react-bootstrap";
+import HomeNavbar from "../components/Common/HomeNavbar";
+import { Table,Button } from "react-bootstrap";
 import styles from "./Cart.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getDatabase, onValue, ref, update } from "firebase/database";
 import { getAuth } from "firebase/auth";
-import CartPayment from "../components/CartPayment";
+import CartPayment from "../components/Cart/CartPayment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
