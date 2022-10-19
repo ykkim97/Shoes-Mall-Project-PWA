@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCCwt8AVPXoEGpX2XHzoBR6SYLJsRuUOak",
-    authDomain: "shoes-shoppingmall.firebaseapp.com",
-    databaseURL: "https://shoes-shoppingmall-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "shoes-shoppingmall",
-    storageBucket: "shoes-shoppingmall.appspot.com",
-    messagingSenderId: "533905534329",
-    appId: "1:533905534329:web:6d37786f454f9edec753a8"
+    apiKey: process.env.REACT_APP_REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DB_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
