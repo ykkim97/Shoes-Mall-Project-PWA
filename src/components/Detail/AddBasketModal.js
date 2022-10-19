@@ -2,24 +2,10 @@ import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import styles from "./AddBasketModal.module.css";
+import { disableScroll, enableScroll } from "../../module/ScrollFixed.js";
 
 const AddBasketModal = ({onOpenModal}) => {
-
     const navigate = useNavigate();
-
-    const disableScroll = () => {
-        document.body.style.cssText = `
-        position: fixed; 
-        top: -${window.scrollY}px;
-        overflow-y: scroll;
-        width: 100%;`;
-    }
-
-    const enableScroll = () => {
-        const scrollY = document.body.style.top;
-        document.body.style.cssText = '';
-        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
-    }
 
     useEffect(() => {
         disableScroll();

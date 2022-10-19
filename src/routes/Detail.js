@@ -224,7 +224,10 @@ function Detail({
                 <TabContent tabs={tabs} />
             </div> 
             
-            <Footer addBasketModalOn={addBasketModalOn}/>
+            <Footer 
+                addBasketModalOn={addBasketModalOn}
+                buyItNowModalOn={buyItNowModalOn}
+            />
             
         </>
     )

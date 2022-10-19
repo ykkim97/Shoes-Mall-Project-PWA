@@ -23,3 +23,8 @@
     color: black;
     height: 183px;
 }
+
+.footer-info h3,
+.footer-info p {
+    text-align: center;
+}

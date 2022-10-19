@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import styles from "./DetailPayment.module.css";
+import { disableScroll, enableScroll } from "../../module/ScrollFixed.js";
 
 function DetailPayment({ openBuyItNowModal, findItem, itemCount }) {
+    useEffect(() => {
+        disableScroll();
+        return () => enableScroll();
+    }, []);
+
     return (
         <div className={styles["payment-modal"]}>
             <div className={styles["bg"]}></div>
