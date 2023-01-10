@@ -10,7 +10,7 @@ function HomeCarousel() {
                 <Carousel.Item className={styles['carousel-item']}>
                     <img
                         className={`d-block w-100 ${styles['carousel-img']}`}
-                        src="img/home-캐러셀1.JPG"
+                        src="img/home-carousel1.JPG"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -21,7 +21,7 @@ function HomeCarousel() {
                 <Carousel.Item className={styles['carousel-item']}>
                     <img
                         className={`d-block w-100 ${styles['carousel-img']}`}
-                        src="img/home-캐러셀2.jpg"
+                        src="img/home-carousel2.jpg"
                         alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -32,7 +32,7 @@ function HomeCarousel() {
                 <Carousel.Item className={styles['carousel-item']}>
                     <img
                         className={`d-block w-100 ${styles['carousel-img']}`}
-                        src="img/home-캐러셀3.jpg"
+                        src="img/home-carousel3.jpg"
                         alt="Third slide"
                     />
                     <Carousel.Caption>

@@ -14,17 +14,18 @@
 .shoes-title {
     margin-top : 10px;
     font-size : 19px;
+    font-weight: bold;
     color : Black;
 }
 
 .shoes-content {
     font-size : 15px;
-    color : grey;
+    color : Black;
 }   
 
 .shoes-price {
     font-size : 15px;
-    color : grey;
+    color : Black;
 }
 
 .itemImage {

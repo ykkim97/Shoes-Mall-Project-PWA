@@ -1,5 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import popularData from './data/popularData';
 import ScrollToTop from "./components/Common/ScrollToTop";
 import Loading from './components/Common/Loading';
