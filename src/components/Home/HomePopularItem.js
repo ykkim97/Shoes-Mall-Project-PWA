@@ -15,6 +15,7 @@ function HomePopularItem({shoes, idx}) {
                             src={`https://firebasestorage.googleapis.com/v0/b/shoes-shoppingmall.appspot.com/o/items%2Fshoes${idx}.jpg?alt=media`} 
                             width="80%" 
                             height="190px" 
+                            alt={`Shoes ${idx}`}
                             className={styles.itemImage}
                         />
                         <h4 className={styles['shoes-title']}>{shoes.title}</h4>

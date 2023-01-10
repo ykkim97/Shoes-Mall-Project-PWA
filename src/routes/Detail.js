@@ -156,7 +156,7 @@ function Detail({
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 detailInfo">
-                        <img src={`https://firebasestorage.googleapis.com/v0/b/shoes-shoppingmall.appspot.com/o/items%2Fshoes${findItem?.id}.jpg?alt=media`} width="100%" />
+                        <img src={`https://firebasestorage.googleapis.com/v0/b/shoes-shoppingmall.appspot.com/o/items%2Fshoes${findItem?.id}.jpg?alt=media`} width="100%" alt={`Shoes ${findItem?.id}`}/>
                     </div>
                     <div className="col-md-12" id={styles.detailInfo}>
                         <h4 className="pt-5">{findItem?.title}</h4>

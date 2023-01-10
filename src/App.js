@@ -145,7 +145,7 @@ function App() {
             {/* 404에러 */}
             <Route path='*' element={
               <div>
-                <img src='/img/404error.jpg'></img>
+                <img src='/img/404error.jpg' alt='404 error'></img>
               </div>
             }></Route>
           </Routes>
